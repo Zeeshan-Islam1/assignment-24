@@ -46,7 +46,7 @@ function login() {
         loginEmail.innerHTML = "";
         loginPassword.innerHTML = "";
         setTimeout(function() {
-            window.location.href = "Main/index.html";
+            window.location.href = "login.html";
         }, 1400);
 
     } else {
