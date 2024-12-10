@@ -13,17 +13,21 @@ function signup() {
             showConfirmButton: false,
             timer: 1400
         });
-        email.innerHTML = "";
-        password.innerHTML = "";
+
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
     } else {
         Swal.fire({
             icon: "error",
             title: "Please fill out both fields!",
             showConfirmButton: false,
             timer: 1400
-        });
+        }); 
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
     }
 }
+
 
 function login() {
     var email = document.getElementById('loginEmail').value;
@@ -41,6 +45,10 @@ function login() {
         });
         loginEmail.innerHTML = "";
         loginPassword.innerHTML = "";
+        setTimeout(function() {
+            window.location.href = "Main/index.html";
+        }, 1400);
+
     } else {
         Swal.fire({
             icon: "error",
@@ -50,3 +58,5 @@ function login() {
         });
     }
 }
+
+
